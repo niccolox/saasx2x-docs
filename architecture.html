@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the Rust application, Python sidecar and data services work together.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>Architecture · Sovereign Source</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><a class="brand" href="index.html">S↗ Sovereign Source</a><nav aria-label="Main"><a href="index.html#modules">Modules</a><a href="architecture.html" aria-current="page">Architecture</a></nav></header>
+  <main id="main">
+    <section class="hero"><p class="eyebrow">Architecture</p><h1>One application.<br>Clear responsibilities.</h1><p class="lead">A modular Rust backend owns access and business changes. An internal Python sidecar provides typed intelligence and workflow support.</p></section>
+    <section aria-labelledby="flow"><h2 id="flow">From screens to durable records</h2><ol class="flow"><li><strong>Role-based screens</strong><span>Customers · operators · administrators</span></li><li><strong>Rust / Axum</strong><span>Authorization · validation · business commands</span></li><li><strong>Postgres</strong><span>Durable business records</span></li></ol></section>
+    <div class="grid">
+      <article><h2>Frontend</h2><p>Storefront and publication pages support browsing. Employee workspaces and dashboards expose actions according to role and feature gates. Tailwind and daisyUI provide shared themes.</p></article>
+      <article><h2>Backend</h2><p>Rust/Axum serves HTTP APIs and WebSocket updates. Business modules coordinate through explicit contracts, with backend checks for each protected action.</p></article>
+      <article><h2>Python sidecar</h2><p>FastAPI and Pydantic define typed interfaces. Worker and Prefect workflows support selected operations; DuckDB supplies bounded derived analytics.</p></article>
+    </div>
+    <aside class="note"><h2>Qualification is explicit</h2><p>Analytics do not authorize payments or ledger posting. A fixture adapter does not establish a working live integration. External providers, full tenant isolation and AI automation require separate acceptance.</p></aside>
+  </main>
+  <footer><span>Sovereign Source · Public documentation</span><a href="index.html">← Overview</a></footer>
+</body>
+</html>
